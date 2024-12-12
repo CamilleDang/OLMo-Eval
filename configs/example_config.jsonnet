@@ -3,6 +3,7 @@
 local utils = import 'utils.libsonnet';
 
 local gen_tasks = import 'task_sets/gen_tasks.libsonnet';
+local wmdp_tasks = import 'task_sets/wmdp_tasks.libsonnet';
 //❗other task sets can be imported here
 
 //❗Set gsheet to the name of your google sheet.
@@ -14,10 +15,9 @@ local gsheet = null;
 
 local models = [
     {
-        model_path: "EleutherAI/pythia-1b",
-        revision: "step140000", //❗Specify checkpoint if needed
+        model_path: "allenai/OLMo-7B",
+        trust_remote_code: true,
         gpus_needed: 1,
-        //❗Task sets contain default values for prediction_kwargs. These can be overriden for each model here.
         prediction_kwargs: {
             model_max_length: 2048,
             max_batch_tokens: 20480,
@@ -29,9 +29,9 @@ local models = [
 
 local task_sets = [
     gen_tasks.task_set,
+    wmdp_tasks.task_set
     //❗other task sets can be added here
 ];
-
 
 {
     steps: utils.create_pipeline(models, task_sets, gsheet)

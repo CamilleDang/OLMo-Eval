@@ -1,0 +1,147 @@
+[12/03/24 08:50:05] INFO     Starting new run modern-insect                                                                       site-packages/tango/cli.py:203
+[12/03/24 08:50:05] INFO     ✓ Found output for step "catwalk_model_OLMo-7Bstep140000" in cache...                               site-packages/tango/step.py:748
+[12/03/24 08:50:05] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache...                                           site-packages/tango/step.py:748
+[12/03/24 08:50:05] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache...                           site-packages/tango/step.py:748
+[12/03/24 08:50:05] INFO     ✓ Found output for step "catwalk_model_OLMo-7Bstep140000" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_drop")... site-p
+[12/03/24 08:50:05] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_drop")... site-packages/tang
+[12/03/24 08:50:05] INFO     ● Starting step "outputs_OLMo-7Bstep140000_gen_tasks_drop"...                                       site-packages/tango/step.py:761
+[12/03/24 08:50:05] WARNING  /home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/datasets/load.py:929: FutureWarning: The repository for dr
+must be executed to correctly load the dataset. You can inspect the repository content at 
+/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/dependencies/lm_eval/datasets/drop/drop.py
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+  warnings.py:109
+[12/03/24 08:50:05] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/allenai/OLMo-7B/resolve/step140000/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 925, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1376, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1296, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 277, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 301, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 413, in hf_raise_for_status
+    raise _format(RevisionNotFoundError, message, response) from e
+huggingface_hub.errors.RevisionNotFoundError: 404 Client Error. (Request ID: Root=1-674ec63d-140b7ebd3453c0526e76cc62;7ad299a9-cdae-45e7-b805-d5104459dcff)
+
+Revision Not Found for url: https://huggingface.co/allenai/OLMo-7B/resolve/step140000/config.json.
+Invalid rev id: step140000
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in run
+    predictions = [
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in <listcomp>
+    predictions = [
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 91, in predict
+    model = self._make_model(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 429, in _make_model
+    return cached_transformers.get(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/cached_transformers.py", line 131, in get
+    transformer = cls.from_pretrained(  # type: ignore
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/utils/hub.py", line 433, in cached_file
+    raise EnvironmentError(
+OSError: step140000 is not a valid git identifier (branch name, tag name or commit id) that exists for this model name. Check the model page at 
+'https://huggingface.co/allenai/OLMo-7B' for available revisions.
+[12/03/24 08:50:05] ERROR    ✗ Step "outputs_OLMo-7Bstep140000_gen_tasks_drop" failed                                            site-packages/tango/step.py:782
+[12/03/24 08:50:05] INFO     ✓ Found output for step "catwalk_model_OLMo-7Bstep140000" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_
+[12/03/24 08:50:05] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_sh
+[12/03/24 08:50:05] INFO     ● Starting step "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_open"...                       site-packages/tango/step.py:761
+[12/03/24 08:50:08] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 406, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/allenai/OLMo-7B/resolve/step140000/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 862, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 925, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1376, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1296, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 277, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 301, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 413, in hf_raise_for_status
+    raise _format(RevisionNotFoundError, message, response) from e
+huggingface_hub.errors.RevisionNotFoundError: 404 Client Error. (Request ID: Root=1-674ec640-619514430b6ab1271dafa6b2;1b44ea94-4757-4e90-9bb6-fc4723de7ceb)
+
+Revision Not Found for url: https://huggingface.co/allenai/OLMo-7B/resolve/step140000/config.json.
+Invalid rev id: step140000
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in run
+    predictions = [
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in <listcomp>
+    predictions = [
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 91, in predict
+    model = self._make_model(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 429, in _make_model
+    return cached_transformers.get(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/cached_transformers.py", line 131, in get
+    transformer = cls.from_pretrained(  # type: ignore
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/utils/hub.py", line 433, in cached_file
+    raise EnvironmentError(
+OSError: step140000 is not a valid git identifier (branch name, tag name or commit id) that exists for this model name. Check the model page at 
+'https://huggingface.co/allenai/OLMo-7B' for available revisions.
+[12/03/24 08:50:08] ERROR    ✗ Step "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_open" failed                            site-packages/tango/step.py:782
+[12/03/24 08:50:08] ERROR    ✗ Run modern-insect finished with errors                                                             site-packages/tango/cli.py:208
+                                                                                                                                                                
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ Step Name                                                ┃ Status      ┃ Results                                                                            ┃
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+ │ catwalk_model_OLMo-7Bstep140000                          │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructCatwalkModel-002-5QuFzxb… │
+ │ combine-all-outputs                                      │ - not run   │ N/A                                                                                │
+ │ outputs_OLMo-7Bstep140000_gen_tasks_drop                 │ ✗ failed    │ N/A                                                                                │
+ │ outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_open │ ✗ failed    │ N/A                                                                                │
+ │ task_gen_tasks_drop                                      │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-3wqMqtccrsB… │
+ │ task_gen_tasks_naturalqs_short_open                      │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-4DrkNb2mLo4… │
+ └──────────────────────────────────────────────────────────┴─────────────┴────────────────────────────────────────────────────────────────────────────────────┘
+                                                              ✗ 2 failed, ✓ 3 succeeded, 1 not run                                                              
+                                                                                                                                                                

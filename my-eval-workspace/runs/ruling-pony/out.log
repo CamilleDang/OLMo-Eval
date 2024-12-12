@@ -1,0 +1,21 @@
+[12/03/24 09:11:48] INFO     Starting new run ruling-pony                                                                         site-packages/tango/cli.py:203
+[12/03/24 09:11:48] INFO     ✓ Found output for step "catwalk_model_OLMo-7B" in cache...                                         site-packages/tango/step.py:748
+[12/03/24 09:11:48] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache...                                           site-packages/tango/step.py:748
+[12/03/24 09:11:48] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache...                           site-packages/tango/step.py:748
+[12/03/24 09:11:48] INFO     ✓ Found output for step "outputs_OLMo-7B_gen_tasks_drop" in cache...                                site-packages/tango/step.py:748
+[12/03/24 09:11:48] INFO     ✓ Found output for step "outputs_OLMo-7B_gen_tasks_naturalqs_short_open" in cache...                site-packages/tango/step.py:748
+[12/03/24 09:11:48] INFO     ✓ Found output for step "combine-all-outputs" in cache...                                           site-packages/tango/step.py:748
+[12/03/24 09:11:48] INFO     ✓ Finished run ruling-pony                                                                           site-packages/tango/cli.py:210
+                                                                                                                                                                
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ Step Name                                      ┃ Status      ┃ Results                                                                                      ┃
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+ │ catwalk_model_OLMo-7B                          │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructCatwalkModel-002-fsGF6VDFBwZH7bRDH… │
+ │ combine-all-outputs                            │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/WriteOutputsAsRows-001-3wttuGANK5QuemNCc9cw… │
+ │ outputs_OLMo-7B_gen_tasks_drop                 │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/PredictAndCalculateMetricsStep-003-3WGhwrZJ… │
+ │ outputs_OLMo-7B_gen_tasks_naturalqs_short_open │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/PredictAndCalculateMetricsStep-003-Cxt9ShyC… │
+ │ task_gen_tasks_drop                            │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-3wqMqtccrsBq6ch2aiD2T… │
+ │ task_gen_tasks_naturalqs_short_open            │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-4DrkNb2mLo4pqnEj8YRjb… │
+ └────────────────────────────────────────────────┴─────────────┴──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                                          ✓ 6 succeeded                                                                         
+                                                                                                                                                                

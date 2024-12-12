@@ -1,0 +1,7 @@
+{
+    "format": {
+        "type": "tango.format.DillFormat",
+        "compress": "gz"
+    },
+    "step": "WriteOutputsAsRows-001-BUK5MrBoFTeS1681NvwdvSQPSPwJJie8"
+}

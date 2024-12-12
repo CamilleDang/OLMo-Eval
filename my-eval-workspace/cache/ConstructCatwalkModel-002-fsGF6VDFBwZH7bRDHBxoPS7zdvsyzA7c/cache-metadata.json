@@ -1,0 +1,7 @@
+{
+    "format": {
+        "type": "tango.format.DillFormat",
+        "compress": "gz"
+    },
+    "step": "ConstructCatwalkModel-002-fsGF6VDFBwZH7bRDHBxoPS7zdvsyzA7c"
+}

@@ -2,8 +2,10 @@ from typing import Dict
 
 from catwalk.task import Task, rc_metrics
 from catwalk.tasks.eleuther import EleutherMMLUTask
+from catwalk.dependencies.lm_eval.base import MultipleChoiceTask
 
 from .mmlu_std import create_catwalk_mmlu_std_tasks
+from .wmdp_std import WMDPMCBioStd, WMDPMCChemStd, WMDPMCCyberStd
 
 # Defines TASKS_LM specifically for task variants geared towards LM type models
 # Usually will use TASKS from catwalk as fallback
@@ -64,7 +66,16 @@ TASKS_STD: Dict[str, Task] = {
     "socialiqa_std": EleutherMMLUTask("socialiqa_std", ranked_classification=True).add_metrics(
         rc_metrics(primary="acc_per_char")
     ),
-    "socialiqa_mc_std": EleutherMMLUTask(
-        "socialiqa_mc_std", ranked_classification=True
-    ).add_metrics(rc_metrics(primary="acc_raw")),
+    "socialiqa_mc_std": EleutherMMLUTask("socialiqa_mc_std", ranked_classification=True).add_metrics(
+        rc_metrics(primary="acc_raw")
+    ),
+    "wmdp_mc_bio_std": EleutherMMLUTask("wmdp_mc_bio_std", ranked_classification=True).add_metrics(
+        rc_metrics(primary="acc_raw")
+    ),
+    "wmdp_mc_chem_std": EleutherMMLUTask("wmdp_mc_chem_std", ranked_classification=True).add_metrics(
+        rc_metrics(primary="acc_raw")
+    ),
+    "wmdp_mc_cyber_std": EleutherMMLUTask("wmdp_mc_cyber_std", ranked_classification=True).add_metrics(
+        rc_metrics(primary="acc_raw")
+    ),
 }

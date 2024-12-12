@@ -1,0 +1,48 @@
+[12/03/24 08:48:48] INFO     Starting new run intent-civet                                                                        site-packages/tango/cli.py:203
+[12/03/24 08:48:48] INFO     ● Starting step "catwalk_model_OLMo-7Bstep140000"...                                                site-packages/tango/step.py:761
+[12/03/24 08:48:49] INFO     ✓ Finished step "catwalk_model_OLMo-7Bstep140000"                                                   site-packages/tango/step.py:774
+[12/03/24 08:48:49] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache...                                           site-packages/tango/step.py:748
+[12/03/24 08:48:49] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache...                           site-packages/tango/step.py:748
+[12/03/24 08:48:49] INFO     ✓ Found output for step "catwalk_model_OLMo-7Bstep140000" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_drop")... site-p
+[12/03/24 08:48:49] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_drop")... site-packages/tang
+[12/03/24 08:48:49] INFO     ● Starting step "outputs_OLMo-7Bstep140000_gen_tasks_drop"...                                       site-packages/tango/step.py:761
+[12/03/24 08:48:49] WARNING  /home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/datasets/load.py:929: FutureWarning: The repository for dr
+must be executed to correctly load the dataset. You can inspect the repository content at 
+/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/dependencies/lm_eval/datasets/drop/drop.py
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+  warnings.py:109
+[12/03/24 08:48:49] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 254, in run
+    for result in model.predict(
+TypeError: LanguageModel.predict() got an unexpected keyword argument 'trust_remote_code'
+[12/03/24 08:48:49] ERROR    ✗ Step "outputs_OLMo-7Bstep140000_gen_tasks_drop" failed                                            site-packages/tango/step.py:782
+[12/03/24 08:48:49] INFO     ✓ Found output for step "catwalk_model_OLMo-7Bstep140000" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_
+[12/03/24 08:48:49] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache (needed by "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_sh
+[12/03/24 08:48:49] INFO     ● Starting step "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_open"...                       site-packages/tango/step.py:761
+[12/03/24 08:48:52] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 254, in run
+    for result in model.predict(
+TypeError: LanguageModel.predict() got an unexpected keyword argument 'trust_remote_code'
+[12/03/24 08:48:52] ERROR    ✗ Step "outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_open" failed                            site-packages/tango/step.py:782
+[12/03/24 08:48:52] ERROR    ✗ Run intent-civet finished with errors                                                              site-packages/tango/cli.py:208
+                                                                                                                                                                
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ Step Name                                                ┃ Status      ┃ Results                                                                            ┃
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+ │ catwalk_model_OLMo-7Bstep140000                          │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructCatwalkModel-002-5QuFzxb… │
+ │ combine-all-outputs                                      │ - not run   │ N/A                                                                                │
+ │ outputs_OLMo-7Bstep140000_gen_tasks_drop                 │ ✗ failed    │ N/A                                                                                │
+ │ outputs_OLMo-7Bstep140000_gen_tasks_naturalqs_short_open │ ✗ failed    │ N/A                                                                                │
+ │ task_gen_tasks_drop                                      │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-3wqMqtccrsB… │
+ │ task_gen_tasks_naturalqs_short_open                      │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-4DrkNb2mLo4… │
+ └──────────────────────────────────────────────────────────┴─────────────┴────────────────────────────────────────────────────────────────────────────────────┘
+                                                              ✗ 2 failed, ✓ 3 succeeded, 1 not run                                                              
+                                                                                                                                                                

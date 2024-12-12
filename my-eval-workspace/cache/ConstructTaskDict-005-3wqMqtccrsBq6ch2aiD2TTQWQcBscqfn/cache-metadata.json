@@ -1,0 +1,7 @@
+{
+    "format": {
+        "type": "tango.format.DillFormat",
+        "compress": "gz"
+    },
+    "step": "ConstructTaskDict-005-3wqMqtccrsBq6ch2aiD2TTQWQcBscqfn"
+}

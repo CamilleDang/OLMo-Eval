@@ -1,0 +1,119 @@
+[12/03/24 08:38:10] INFO     Starting new run pretty-robin                                                                        site-packages/tango/cli.py:203
+[12/03/24 08:38:10] INFO     ● Starting step "catwalk_model_pythia-1bstep140000"...                                              site-packages/tango/step.py:761
+[12/03/24 08:38:10] INFO     ✓ Finished step "catwalk_model_pythia-1bstep140000"                                                 site-packages/tango/step.py:774
+[12/03/24 08:38:10] INFO     ● Starting step "task_gen_tasks_drop"...                                                            site-packages/tango/step.py:761
+[12/03/24 08:38:10] INFO     ✓ Finished step "task_gen_tasks_drop"                                                               site-packages/tango/step.py:774
+[12/03/24 08:38:10] INFO     ● Starting step "task_gen_tasks_naturalqs_short_open"...                                            site-packages/tango/step.py:761
+[12/03/24 08:38:10] INFO     ✓ Finished step "task_gen_tasks_naturalqs_short_open"                                               site-packages/tango/step.py:774
+[12/03/24 08:38:10] INFO     ✓ Found output for step "catwalk_model_pythia-1bstep140000" in cache (needed by "outputs_pythia-1bstep140000_gen_tasks_drop")... si
+[12/03/24 08:38:10] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache (needed by "outputs_pythia-1bstep140000_gen_tasks_drop")... site-packages/ta
+[12/03/24 08:38:10] INFO     ● Starting step "outputs_pythia-1bstep140000_gen_tasks_drop"...                                     site-packages/tango/step.py:761
+[12/03/24 08:38:10] WARNING  /home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/datasets/load.py:929: FutureWarning: The repository for dr
+must be executed to correctly load the dataset. You can inspect the repository content at 
+/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/dependencies/lm_eval/datasets/drop/drop.py
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+  warnings.py:109
+[12/03/24 08:39:14] WARNING  /home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecat
+future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly,
+use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+           warnings.py:109
+[12/03/24 08:39:16] INFO     Device 0 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 1 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 2 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 3 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 4 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 5 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 6 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 7 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 8 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:16] INFO     Device 9 seems unavailable, Proceeding to check subsequent devices.                  site-packages/accelerate/utils/modeling.py:844
+[12/03/24 08:39:29] INFO     Running greedy_until queries:   0%|          | 0/2 [00:00<?, ?it/s]                           site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:29] INFO     Created a temporary directory at /tmp/tmp87ui60b8                         site-packages/torch/distributed/nn/jit/instantiator.py:21
+[12/03/24 08:39:29] INFO     Writing /tmp/tmp87ui60b8/_remote_module_non_scriptable.py                 site-packages/torch/distributed/nn/jit/instantiator.py:76
+[12/03/24 08:39:39] INFO     Running greedy_until queries: 100%|##########| 2/2 [00:10<00:00,  5.27s/it]                   site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:39] INFO     Running greedy_until queries: 100%|##########| 2/2 [00:10<00:00,  5.32s/it]                   site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:39] INFO     Calculating metrics:   0%|          | 0/2 [00:00<?, ?it/s]                                    site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:39] INFO     Calculating metrics: 100%|##########| 2/2 [00:00<00:00, 61680.94it/s]                         site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:39] INFO     First instance details for task drop: {'instance': {'section_id': 'history_2609', 'query_id': '50ad1ec3-d7b5-4ffc-82db-af0e31f4bdf7
+{'model_output': [{'text': ' united states', 'raw_text': ' united states\n', 'num_input_tokens': 1670, 'num_generated_tokens': 3}], 'metrics': {'em': 0, 'f1': 
+0}}, 'model_input': {'greedy_until': [("Passage: At the 2000 United States Census, 1,953,631 people inhabited the city, and the population density was 3,371.7 
+people per square mile (1,301.8/km²). The racial makeup of the city in 2000 was 49.3% White, 25.3% African American, 6.3% Asian, 0.7% American Indian, 0.1% 
+Pacific Islander, 16.5% from some other race, and 3.1% from two or more races. In addition, Hispanics made up 37.4% of Houstons population in 2000, while 
+non-Hispanic Whites made up 30.8%. The proportion of non-Hispanic whites in Houston has decreased significantly since 1970, when it was 62.4%.\nQuestion: Which 
+racial group made up a larger percentage of the population, Asian or African American?\nAnswer: African American\n\nPassage: In a rematch of the opening game of
+the season, where the Houston Texans defeated the Indianapolis Colts 34-24, the Colts looked for revenge in their first Monday night game in Indianapolis since 
+2006.  Both defenses came out strong in the beginning with both teams punting on their first drives.  On the Colts second possession of the game, Indianapolis 
+drove down the field for a Jacob Tamme touchdown, giving the Colts a 7-0 lead.  Going into the second quarter, the Indianapolis offense and defense proved too 
+much for the Texans.  Kelvin Hayden took a 25-yard interception to the end zone and gave Indianapolis a 14-0 lead.  On the following drive, Houston went down 
+into Colts territory, however was only able to score a field goal ending the Indianapolis shutout.  An Adam Vinatieri field goal gave the Colts a 17-3 lead 
+going into halftime.  Houston came out of the locker room improved, however Peyton Manning and the Indianapolis offense continued to be productive scoring a 
+touchdown on a Reggie Wayne reception in the beginning of the first half.  Following a Matt Schaub touchdown and another Vinatieri field goal, the Colts held a 
+27-10 lead going into the fourth quarter.  With the Houston offense looking improved and the Indianapolis defense struggling, the Texans were able to score a 
+touchdown on an Arian Foster run, while the Colts scored another field goal.  With less than two minutes remaining in the game, a fumble by Schaub sealed the 
+game with the final score being 30-17.  With the win, Indianapolis moved to 5-2 on the season and held sole possession of first place for the first time in the 
+2010 season.\nQuestion: How many times did Indianapolis score in the first half?\nAnswer: 3\n\nPassage: After a close win against the Falcons, the Steelers 
+returned home for a game against the Chiefs.  They were facing a WIN AND IN scenario for the playoffs.  They would score first in the first quarter when Shaun 
+Suisham kicked a 23-yard field goal for a 3-0 lead.  The Chiefs managed to tie it up later on in the quarter when Cairo Santos nailed a 35-yard field goal for a
+3-3 game.  The Chiefs took the lead in the 2nd quarter when Santos kicked a 25-yard field goal for a 6-3 game.  The Steelers later on in the quarter retook the 
+lead as Le'Veon Bell ran for a 1-yard TD for a halftime score of 10-6.  After the break, the Steelers got back to work in the 3rd quarter as Ben Roethlisberger 
+found Antonio Brown on a 3-yard TD pass for a 17-6 game.  In the 4th quarter, the Chiefs came within 8 when Santos kicked another field goal from 43 yards out 
+for a 17-9 game.  The Steelers however pulled away as Suisham kicked a 20-yard field goal for a 20-9 game.  Santos would later on kick a 23-yard field goal for 
+the eventual final score of 20-12. With the win, the Steelers improved to 10-5 and endured their first playoff appearance since 2011. Antonio Brown finished the
+game with 122 catches on the season, the third-highest single-season total in league history while Jamaal Charles was held to his second-lowest rushing total of
+the season.\nQuestion: How many total points were scored by then end of the game?\nAnswer: 32\n\nPassage: In week 16, the Lions hosted the Atlanta Falcons on a 
+Saturday night. Atlanta took an early lead, which they never gave back, when Roddy White caught a 44-yard touchdown pass from Matt Ryan. The Lions responded 
+with a 34-yard field goal by Jason Hanson. In the second quarter, the Falcons' Roddy White caught another touchdown pass, this one from 39 yards out. Atlanta 
+added more points when Julio Jones caught a 16-yard touchdown pass. The Lions ended the first half with a 38-yard field goal by Jason Hanson. The only points of
+the third quarter was a 1-yard touchdown run by Detroit's Mikel Leshoure. The Lions scored another field goal to start the fourth quarter, this one from 20 
+yards out. The Falcons added 10 more points when Michael Palmer caught a 1-yard touchdown pass, then Matt Bryant kicked a 20-yard field goal. The Lions scored 
+the game's final points when Atlanta's Michael Turner was tackled in his own end zone for a Detroit safety. The game's biggest highlight was when Detroit's 
+Calvin Johnson surpassed Jerry Rice's 1,848-yard single season receiving record from 1995. At the end of the game, Johnson had compiled 1,892 receiving yards on
+the year.\nQuestion: How many 1-yard touchdown plays were there?\nAnswer: 2\n\nPassage: Hanley won Cap (sport)s for England national rugby league team while at 
+Bradford Northern in 1984 against Wales, while at Leeds in 1992 against Wales, and won Cap (sport)s for Great Britain national rugby league team while at 
+Bradford Northern in 1984 against France (sub), France, Australia (3 matches), New Zealand (3 matches), and Papua New Guinea, in 1985 against France (2 
+matches), while at Wigan in 1985 against New Zealand (3 matches), in 1986 against France, and Australia, in 1987 against France (2 matches), and Papua New 
+Guinea, in 1988 against France (2 matches), Papua New Guinea, Australia (3 matches), and New Zealand, in 1989 against France (2 matches), in 1990 against 
+France, and Australia (3 matches), in 1991 against France (2 matches), while at Leeds in 1992 against Australia, in 1993 against France.\nQuestion: How many 
+more strikeouts than walks did Rhodes throw?\nAnswer: 68\n\nPassage: As of the census of 2000, there were 7,791 people, 3,155 households, and 2,240 families 
+residing in the county.  The population density was 16 people per square mile (6/km²).  There were 3,723 housing units at an average density of 8 per square 
+mile (3/km²).  The racial makeup of the county was 97.63% Race (United States Census), 0.18% Race (United States Census) or Race (United States Census), 1.07% 
+Race (United States Census), 0.19% Race (United States Census), 0.03% Race (United States Census), 0.22% from Race (United States Census), and 0.69% from two or
+more races.  1.26% of the population were Race (United States Census) or Race (United States Census) of any race. 33.7% were of germans, 13.9% swedish people, 
+10.1% irish people, 8.8% united states, 7.0% english people and 5.4% Danish people ancestry according to Census 2000.\nQuestion: Which ancestral group is 
+larger: swedish or united states?\nAnswer:", ['\n'])]}} olmo_eval/steps/run_catwalk.py:278
+[12/03/24 08:39:39] INFO     ✓ Finished step "outputs_pythia-1bstep140000_gen_tasks_drop"                                        site-packages/tango/step.py:774
+[12/03/24 08:39:39] INFO     ✓ Found output for step "catwalk_model_pythia-1bstep140000" in cache (needed by "outputs_pythia-1bstep140000_gen_tasks_naturalqs_sh
+[12/03/24 08:39:39] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache (needed by "outputs_pythia-1bstep140000_gen_tasks_naturalqs_
+[12/03/24 08:39:39] INFO     ● Starting step "outputs_pythia-1bstep140000_gen_tasks_naturalqs_short_open"...                     site-packages/tango/step.py:761
+[12/03/24 08:39:47] INFO     Running greedy_until queries:   0%|          | 0/2 [00:00<?, ?it/s]                           site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:48] INFO     Running greedy_until queries: 100%|##########| 2/2 [00:01<00:00,  1.40it/s]                   site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:48] INFO     Running greedy_until queries: 100%|##########| 2/2 [00:01<00:00,  1.39it/s]                   site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:48] INFO     Calculating metrics:   0%|          | 0/2 [00:00<?, ?it/s]                                    site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:48] INFO     Calculating metrics: 100%|##########| 2/2 [00:00<00:00, 61230.72it/s]                         site-packages/tango/common/tqdm.py:74
+[12/03/24 08:39:48] INFO     First instance details for task naturalqs_short_open: {'instance': {'instance_idx': 0}, 'prediction': {'model_output': [{'text': 'T
+Beatles\n', 'num_input_tokens': 121, 'num_generated_tokens': 3}], 'metrics': {'em': 0, 'f1': 0}}, 'model_input': {'greedy_until': [("Q: when does the next 
+handmaid's tale come out\nA:2018\n\nQ: who was the yellow rose of texas named after\nA:Emily D. West\n\nQ: when do football teams wear their third kit\nA:for 
+identifying with causes, too similar to play easily, to generate revenue\n\nQ: when did the airplane crash into the hudson\nA:January 15, 2009\n\nQ: who sang 
+skip to my lou my darling\nA:Lead Belly\n\nQ: who is playing halftime show super bowl 2018\nA:", ['\n'])]}} olmo_eval/steps/run_catwalk.py:278
+[12/03/24 08:39:49] INFO     ✓ Finished step "outputs_pythia-1bstep140000_gen_tasks_naturalqs_short_open"                        site-packages/tango/step.py:774
+[12/03/24 08:39:49] INFO     ✓ Found output for step "outputs_pythia-1bstep140000_gen_tasks_drop" in cache (needed by "combine-all-outputs")... site-packages/ta
+[12/03/24 08:39:49] INFO     ✓ Found output for step "outputs_pythia-1bstep140000_gen_tasks_naturalqs_short_open" in cache (needed by "combine-all-outputs")... 
+[12/03/24 08:39:49] INFO     ● Starting step "combine-all-outputs"...                                                            site-packages/tango/step.py:761
+[12/03/24 08:39:49] INFO     ✓ Finished step "combine-all-outputs"                                                               site-packages/tango/step.py:774
+[12/03/24 08:39:49] INFO     ✓ Finished run pretty-robin                                                                          site-packages/tango/cli.py:210
+                                                                                                                                                                
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ Step Name                                                  ┃ Status      ┃ Results                                                                          ┃
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+ │ catwalk_model_pythia-1bstep140000                          │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructCatwalkModel-002-5YRga… │
+ │ combine-all-outputs                                        │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/WriteOutputsAsRows-001-BUK5MrBo… │
+ │ outputs_pythia-1bstep140000_gen_tasks_drop                 │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/PredictAndCalculateMetricsStep-… │
+ │ outputs_pythia-1bstep140000_gen_tasks_naturalqs_short_open │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/PredictAndCalculateMetricsStep-… │
+ │ task_gen_tasks_drop                                        │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-3wqMqtccr… │
+ │ task_gen_tasks_naturalqs_short_open                        │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-4DrkNb2mL… │
+ └────────────────────────────────────────────────────────────┴─────────────┴──────────────────────────────────────────────────────────────────────────────────┘
+                                                                          ✓ 6 succeeded                                                                         
+                                                                                                                                                                

@@ -68,6 +68,7 @@ class TestPredictAndCalculateMetricsStep(LLMEvalTestCase):
 
         step = PredictAndCalculateMetricsStep()
         num_instances = 3
+        print(f"%%%% TASK DICT %%%%: {task_dict}")
         result = step.run(model=model, task_dict=task_dict, model_max_length=5, limit=num_instances)
 
         assert isinstance(result, dict)

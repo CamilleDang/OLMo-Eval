@@ -10,6 +10,7 @@ from . import (
     piqa_std,
     siqa_std,
     winogrande_std,
+    wmdp_std
 )
 
 # This directory has new tasks associated with the Standardized Eval Suite
@@ -36,5 +37,8 @@ TASK_REGISTRY.update(
         "piqa_mc_std": piqa_std.PiQAMCStd,
         "socialiqa_std": siqa_std.SocialIQAStd,
         "socialiqa_mc_std": siqa_std.SocialIQAMCStd,
+        "wmdp_mc_bio_std": wmdp_std.WMDPMCBioStd,
+        "wmdp_mc_chem_std": wmdp_std.WMDPMCChemStd,
+        "wmdp_mc_cyber_std": wmdp_std.WMDPMCCyberStd,
     }
 )

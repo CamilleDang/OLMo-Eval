@@ -1,0 +1,78 @@
+[12/03/24 08:52:59] INFO     Starting new run equal-badger                                                                        site-packages/tango/cli.py:203
+[12/03/24 08:52:59] INFO     ● Starting step "catwalk_model_OLMo-7B"...                                                          site-packages/tango/step.py:761
+[12/03/24 08:52:59] INFO     ✓ Finished step "catwalk_model_OLMo-7B"                                                             site-packages/tango/step.py:774
+[12/03/24 08:52:59] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache...                                           site-packages/tango/step.py:748
+[12/03/24 08:52:59] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache...                           site-packages/tango/step.py:748
+[12/03/24 08:52:59] INFO     ✓ Found output for step "catwalk_model_OLMo-7B" in cache (needed by "outputs_OLMo-7B_gen_tasks_drop")... site-packages/tango/step.p
+[12/03/24 08:52:59] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache (needed by "outputs_OLMo-7B_gen_tasks_drop")... site-packages/tango/step.py:
+[12/03/24 08:52:59] INFO     ● Starting step "outputs_OLMo-7B_gen_tasks_drop"...                                                 site-packages/tango/step.py:761
+[12/03/24 08:52:59] WARNING  /home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/datasets/load.py:929: FutureWarning: The repository for dr
+must be executed to correctly load the dataset. You can inspect the repository content at 
+/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/dependencies/lm_eval/datasets/drop/drop.py
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+  warnings.py:109
+[12/03/24 08:53:00] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in run
+    predictions = [
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in <listcomp>
+    predictions = [
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 91, in predict
+    model = self._make_model(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 429, in _make_model
+    return cached_transformers.get(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/cached_transformers.py", line 131, in get
+    transformer = cls.from_pretrained(  # type: ignore
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 526, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1020, in from_pretrained
+    trust_remote_code = resolve_trust_remote_code(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 678, in resolve_trust_remote_code
+    raise ValueError(
+ValueError: Loading allenai/OLMo-7B requires you to execute the configuration file in that repo on your local machine. Make sure you have read the code there to
+avoid malicious use, then set the option `trust_remote_code=True` to remove this error.
+[12/03/24 08:53:00] ERROR    ✗ Step "outputs_OLMo-7B_gen_tasks_drop" failed                                                      site-packages/tango/step.py:782
+[12/03/24 08:53:00] INFO     ✓ Found output for step "catwalk_model_OLMo-7B" in cache (needed by "outputs_OLMo-7B_gen_tasks_naturalqs_short_open")... site-packa
+[12/03/24 08:53:00] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache (needed by "outputs_OLMo-7B_gen_tasks_naturalqs_short_open")
+[12/03/24 08:53:00] INFO     ● Starting step "outputs_OLMo-7B_gen_tasks_naturalqs_short_open"...                                 site-packages/tango/step.py:761
+[12/03/24 08:53:02] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in run
+    predictions = [
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 252, in <listcomp>
+    predictions = [
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 91, in predict
+    model = self._make_model(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/models/language_model.py", line 429, in _make_model
+    return cached_transformers.get(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/cached_transformers.py", line 131, in get
+    transformer = cls.from_pretrained(  # type: ignore
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 526, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1020, in from_pretrained
+    trust_remote_code = resolve_trust_remote_code(
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 678, in resolve_trust_remote_code
+    raise ValueError(
+ValueError: Loading allenai/OLMo-7B requires you to execute the configuration file in that repo on your local machine. Make sure you have read the code there to
+avoid malicious use, then set the option `trust_remote_code=True` to remove this error.
+[12/03/24 08:53:02] ERROR    ✗ Step "outputs_OLMo-7B_gen_tasks_naturalqs_short_open" failed                                      site-packages/tango/step.py:782
+[12/03/24 08:53:03] ERROR    ✗ Run equal-badger finished with errors                                                              site-packages/tango/cli.py:208
+                                                                                                                                                                
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ Step Name                                      ┃ Status      ┃ Results                                                                                      ┃
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+ │ catwalk_model_OLMo-7B                          │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructCatwalkModel-002-4iNEVrnEgeD1ykG9D… │
+ │ combine-all-outputs                            │ - not run   │ N/A                                                                                          │
+ │ outputs_OLMo-7B_gen_tasks_drop                 │ ✗ failed    │ N/A                                                                                          │
+ │ outputs_OLMo-7B_gen_tasks_naturalqs_short_open │ ✗ failed    │ N/A                                                                                          │
+ │ task_gen_tasks_drop                            │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-3wqMqtccrsBq6ch2aiD2T… │
+ │ task_gen_tasks_naturalqs_short_open            │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-4DrkNb2mLo4pqnEj8YRjb… │
+ └────────────────────────────────────────────────┴─────────────┴──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                              ✗ 2 failed, ✓ 3 succeeded, 1 not run                                                              
+                                                                                                                                                                

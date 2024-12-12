@@ -58,8 +58,8 @@ _parser.add_argument(
 )
 _parser.add_argument("--gsheet", type=str, help="Name of Google Sheet for writing results")
 
-
 def main(args: argparse.Namespace):
+
     initialize_logging(log_level="INFO")
     logger = logging.getLogger()
     if args.config_file and args.model:
@@ -185,7 +185,6 @@ def main(args: argparse.Namespace):
     predict_step = PredictAndCalculateMetricsStep(cache_results=False)
     for task_dict in task_dicts:
         task_name = task_dict["name"]
-        logger.info(f"Processing task: {task_name}")
         output = predict_step.run(
             model_obj, task_dict, **filter_dict_keys(task_dict, valid_model_args)
         )

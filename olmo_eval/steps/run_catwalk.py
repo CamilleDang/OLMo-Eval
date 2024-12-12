@@ -33,7 +33,6 @@ logger = logging.getLogger(__name__)
 
 TASKS_LM.update(TASKS_STD)  # Add OLMES-v0.1 tasks
 
-
 @Step.register("construct-task")
 class ConstructTaskDict(Step):
     VERSION = "005"

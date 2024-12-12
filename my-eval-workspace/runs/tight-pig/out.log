@@ -1,0 +1,52 @@
+[12/04/24 20:26:27] INFO     Starting new run tight-pig                                                                           site-packages/tango/cli.py:203
+[12/04/24 20:26:27] INFO     ✓ Found output for step "catwalk_model_OLMo-7B" in cache...                                         site-packages/tango/step.py:748
+[12/04/24 20:26:27] INFO     ✓ Found output for step "task_gen_tasks_drop" in cache...                                           site-packages/tango/step.py:748
+[12/04/24 20:26:27] INFO     ✓ Found output for step "task_gen_tasks_naturalqs_short_open" in cache...                           site-packages/tango/step.py:748
+[12/04/24 20:26:27] INFO     ✓ Found output for step "task_wmdp_tasks_wmdp_mc_std" in cache...                                   site-packages/tango/step.py:748
+[12/04/24 20:26:27] INFO     ✓ Found output for step "task_wmdp_tasks_wmdp_std" in cache...                                      site-packages/tango/step.py:748
+[12/04/24 20:26:27] INFO     ✓ Found output for step "outputs_OLMo-7B_gen_tasks_drop" in cache...                                site-packages/tango/step.py:748
+[12/04/24 20:26:27] INFO     ✓ Found output for step "outputs_OLMo-7B_gen_tasks_naturalqs_short_open" in cache...                site-packages/tango/step.py:748
+[12/04/24 20:26:27] INFO     ✓ Found output for step "catwalk_model_OLMo-7B" in cache (needed by "outputs_OLMo-7B_wmdp_tasks_wmdp_mc_std")... site-packages/tang
+[12/04/24 20:26:27] INFO     ✓ Found output for step "task_wmdp_tasks_wmdp_mc_std" in cache (needed by "outputs_OLMo-7B_wmdp_tasks_wmdp_mc_std")... site-package
+[12/04/24 20:26:27] INFO     ● Starting step "outputs_OLMo-7B_wmdp_tasks_wmdp_mc_std"...                                         site-packages/tango/step.py:761
+[12/04/24 20:26:27] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 261, in run
+    instances = get_instances(task, split, limit, random_subsample_seed)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/steps_simple.py", line 14, in get_instances
+    instances = task.get_split(split)
+AttributeError: 'NoneType' object has no attribute 'get_split'
+[12/04/24 20:26:27] ERROR    ✗ Step "outputs_OLMo-7B_wmdp_tasks_wmdp_mc_std" failed                                              site-packages/tango/step.py:782
+[12/04/24 20:26:27] INFO     ✓ Found output for step "catwalk_model_OLMo-7B" in cache (needed by "outputs_OLMo-7B_wmdp_tasks_wmdp_std")... site-packages/tango/s
+[12/04/24 20:26:27] INFO     ✓ Found output for step "task_wmdp_tasks_wmdp_std" in cache (needed by "outputs_OLMo-7B_wmdp_tasks_wmdp_std")... site-packages/tang
+[12/04/24 20:26:27] INFO     ● Starting step "outputs_OLMo-7B_wmdp_tasks_wmdp_std"...                                            site-packages/tango/step.py:761
+[12/04/24 20:26:27] ERROR    Uncaught exception
+Traceback (most recent call last):
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/tango/step.py", line 483, in _run_with_work_dir
+    result = self.run(**kwargs)
+  File "/home/camille/OLMo-Eval/olmo_eval/steps/run_catwalk.py", line 261, in run
+    instances = get_instances(task, split, limit, random_subsample_seed)
+  File "/home/camille/miniconda3/envs/eval-pipeline/lib/python3.10/site-packages/catwalk/steps_simple.py", line 14, in get_instances
+    instances = task.get_split(split)
+AttributeError: 'NoneType' object has no attribute 'get_split'
+[12/04/24 20:26:27] ERROR    ✗ Step "outputs_OLMo-7B_wmdp_tasks_wmdp_std" failed                                                 site-packages/tango/step.py:782
+[12/04/24 20:26:27] ERROR    ✗ Run tight-pig finished with errors                                                                 site-packages/tango/cli.py:208
+                                                                                                                                                                
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ ┃ Step Name                                      ┃ Status      ┃ Results                                                                                      ┃
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+ │ catwalk_model_OLMo-7B                          │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructCatwalkModel-002-fsGF6VDFBwZH7bRDH… │
+ │ combine-all-outputs                            │ - not run   │ N/A                                                                                          │
+ │ outputs_OLMo-7B_gen_tasks_drop                 │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/PredictAndCalculateMetricsStep-003-3WGhwrZJ… │
+ │ outputs_OLMo-7B_gen_tasks_naturalqs_short_open │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/PredictAndCalculateMetricsStep-003-Cxt9ShyC… │
+ │ outputs_OLMo-7B_wmdp_tasks_wmdp_mc_std         │ ✗ failed    │ N/A                                                                                          │
+ │ outputs_OLMo-7B_wmdp_tasks_wmdp_std            │ ✗ failed    │ N/A                                                                                          │
+ │ task_gen_tasks_drop                            │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-3wqMqtccrsBq6ch2aiD2T… │
+ │ task_gen_tasks_naturalqs_short_open            │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-4DrkNb2mLo4pqnEj8YRjb… │
+ │ task_wmdp_tasks_wmdp_mc_std                    │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-2AgFn2Bn7TSc66oM1LJ5P… │
+ │ task_wmdp_tasks_wmdp_std                       │ ✓ succeeded │ /home/camille/OLMo-Eval/my-eval-workspace/cache/ConstructTaskDict-005-67DEZ74YSHZV8es6fEYK3… │
+ └────────────────────────────────────────────────┴─────────────┴──────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                              ✗ 2 failed, ✓ 7 succeeded, 1 not run                                                              
+                                                                                                                                                                
