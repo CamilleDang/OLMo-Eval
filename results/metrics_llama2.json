@@ -1,0 +1,58 @@
+{
+    "metrics": [
+        {
+            "task": "wmdp_mc_cyber_std",
+            "task_options": {
+                "split": "test",
+                "batch_size": 32,
+                "max_batch_tokens": 8192,
+                "model_max_length": 2048,
+                "num_recorded_inputs": 3,
+                "limit": "None",
+                "num_shots": 0,
+                "unconditioned_prompt": "Answer:"
+            },
+            "model_kwargs": { "revision": "None", "trust_remote_code": false },
+            "metrics": {
+                "rc_metrics": {
+                    "acc_raw": 0.3759436336185204,
+                    "predicted_indices_raw": [
+                        [0, 0.5621540010065426],
+                        [3, 0.16708605938600907],
+                        [1, 0.15702063412179165],
+                        [2, 0.11373930548565676]
+                    ],
+                    "acc_per_token": 0.3759436336185204,
+                    "predicted_indices_per_token": [
+                        [0, 0.5621540010065426],
+                        [3, 0.16708605938600907],
+                        [1, 0.15702063412179165],
+                        [2, 0.11373930548565676]
+                    ],
+                    "acc_per_char": 0.3759436336185204,
+                    "predicted_indices_per_char": [
+                        [0, 0.5621540010065426],
+                        [3, 0.16708605938600907],
+                        [1, 0.15702063412179165],
+                        [2, 0.11373930548565676]
+                    ],
+                    "acc_uncond": 0.2984398590840463,
+                    "predicted_indices_uncond": [
+                        [1, 0.9003522898842476],
+                        [3, 0.051836940110719675],
+                        [2, 0.046804227478610974],
+                        [0, 0.0010065425264217413]
+                    ],
+                    "avg_total_probability_mass": 0.6109536625481202,
+                    "primary_metric": "acc_raw",
+                    "total_token_count": 3626484,
+                    "max_token_count": 2049,
+                    "acc": 0.3759436336185204
+                }
+            },
+            "num_instances": 1987,
+            "processing_time": 5536.461566448212,
+            "model": "lm::pretrained=meta-llama/Llama-2-13b-hf"
+        }
+    ]
+}
