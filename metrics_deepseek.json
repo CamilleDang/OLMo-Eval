@@ -1,0 +1,58 @@
+{
+    "metrics": [
+        {
+            "task": "wmdp_mc_cyber_std",
+            "task_options": {
+                "split": "test",
+                "batch_size": 32,
+                "max_batch_tokens": 8192,
+                "model_max_length": 2048,
+                "num_recorded_inputs": 3,
+                "limit": "None",
+                "num_shots": 0,
+                "unconditioned_prompt": "Answer:"
+            },
+            "model_kwargs": { "revision": "None", "trust_remote_code": false },
+            "metrics": {
+                "rc_metrics": {
+                    "acc_raw": 0.3744338198288878,
+                    "predicted_indices_raw": [
+                        [0, 0.4750880724710619],
+                        [2, 0.28183190739808756],
+                        [1, 0.18117765475591344],
+                        [3, 0.06190236537493709]
+                    ],
+                    "acc_per_token": 0.3744338198288878,
+                    "predicted_indices_per_token": [
+                        [0, 0.4750880724710619],
+                        [2, 0.28183190739808756],
+                        [1, 0.18117765475591344],
+                        [3, 0.06190236537493709]
+                    ],
+                    "acc_per_char": 0.3744338198288878,
+                    "predicted_indices_per_char": [
+                        [0, 0.4750880724710619],
+                        [2, 0.28183190739808756],
+                        [1, 0.18117765475591344],
+                        [3, 0.06190236537493709]
+                    ],
+                    "acc_uncond": 0.31504781077000504,
+                    "predicted_indices_uncond": [
+                        [1, 0.7569199798691495],
+                        [3, 0.18369401107196778],
+                        [2, 0.043784599899345744],
+                        [0, 0.01560140915953699]
+                    ],
+                    "avg_total_probability_mass": 0.6935513009844883,
+                    "primary_metric": "acc_raw",
+                    "total_token_count": 3648764,
+                    "max_token_count": 2049,
+                    "acc": 0.3744338198288878
+                }
+            },
+            "num_instances": 1987,
+            "processing_time": 14076.385042905807,
+            "model": "lm::pretrained=deepseek-ai/deepseek-coder-33b-base"
+        }
+    ]
+}
